@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,25 +9,134 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #ffffff;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.rules-container {
+  padding: 0 0 5px 0;
+  background: #363445;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rules-container p {
+  margin: 0 0 10px 0;
+  padding: 10px 0 0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.score-container {
+  display: flex;
+  justify-content: center;
+}
+
+.score-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #6898d0;
+  margin: 15px 0 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score-circle span {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.user-container {
+  width: 95%;
+  margin: 35px auto 0 auto;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+}
+
+.name {
+  display: inline-block;
+  position: relative;
+  top: -30px;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  background-color: #050026;
+  padding: 0 10px 0 10px;
+}
+
+.game-container {
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+.hole-container {
+  width: 50%;
+  margin: 0 auto 25px auto;
+}
+
+@media screen and (max-width: 844px) {
+  .hole-container {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.hole-number {
+  color: white;
+  font-size: 28px;
+  text-align: left;
+  margin: 0 25px 0 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.hole-number span {
+  position: absolute;
+  width: 35px;
+  margin-left: 15px;
+  color: grey;
+}
+
+.hole-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 15px auto 0 auto;
+}
+
+.hole-btn {
+  width: 25%;
+  background: #d9d9d9;
+  color: black;
+  padding: 5px 0 5px 0;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  background: #6898d0;
+  color: white;
+}
+
+.check {
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.check:hover {
+  color: #5a8257;
 }
